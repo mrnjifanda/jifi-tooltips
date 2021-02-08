@@ -1,0 +1,100 @@
+.jifi-tooltip {
+    position: relative;
+}
+
+.jifi-tooltip:after,
+.jifi-tooltip:before {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    /*transition: .3s ease-in-out;*/
+}
+
+.jifi-tooltip:after {
+    display: block;
+    content: attr(jifi-tooltip);
+    height: auto;
+    left: 20%;
+    min-width: 100px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #fff;
+    background: rgba(0,0,0,0.85);
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 5px;
+    z-index: 999;
+}
+
+.jifi-tooltip:before {
+    width: 0;
+    height: 0;
+    left: 50%;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent;
+}
+
+.jifi-tooltip:hover:after,
+.jifi-tooltip:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.jifi-tooltip:hover:after {
+    bottom: calc(100% + 10px);
+}
+
+.jifi-tooltip:hover:before {
+    bottom: calc(100%);
+    border-top-color: rgba(0,0,0,0.85);
+}
+
+/* Bottom */
+.jifi-tooltip.bottom:hover:after {
+    bottom: calc(-100% - 3px);
+}
+
+.jifi-tooltip.bottom:hover:before {
+    bottom: calc(-9px);
+    border-top-color: transparent;
+    border-bottom-color: rgba(0,0,0,0.85);
+}
+
+/* Right */
+.jifi-tooltip.right:hover:after,
+.jifi-tooltip.right:hover:before  {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.jifi-tooltip.right:hover:after {
+    left: calc(100% + 10px);
+}
+
+.jifi-tooltip.right:hover:before {
+    left: 100%;
+    border-top-color: transparent;
+    border-right-color: rgba(0,0,0,0.85);
+}
+
+/* Left */
+.jifi-tooltip.left:hover:after,
+.jifi-tooltip.left:hover:before {
+    bottom: 50%;
+    transform: translateY(50%);
+    left: auto;
+}
+
+.jifi-tooltip.left:hover:after {
+    right: calc(100% + 10px);
+}
+
+.jifi-tooltip.left:hover:before {
+    right: calc(100%);
+    border-top-color: transparent;
+    border-left-color: rgba(0,0,0,0.85);
+}

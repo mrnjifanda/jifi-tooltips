@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.section {
+    margin: 0;
+    padding: 0;
+}
+
+.section .flex {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+a {
+    background: #6a4aed;
+    padding: 10px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+a:hover {
+    background: #fff;
+    color: #6a4aed;
+    border-color: #6a4aed;
+}
